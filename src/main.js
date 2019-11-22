@@ -14,24 +14,6 @@ $(document).ready(function(){
     // const symptoms = $('#symptoms').val();
     // $('#symptoms').val("");
 
-    // (async () => {
-    //   let hospital = new Hospital();
-    //   let response = await hospital.apiDocName(docName);
-    //   if (response.error) {
-    //     showError(response);
-    //   } else {
-    //     getElements(response);
-    //   }
-    // })();
-    //
-    // function getElements(response) {
-    //
-    // }
-    //
-    // function showError(response) {
-    //
-    // }
-
     (async () => {
       let hospital = new Hospital();
       let response = await hospital.apiDocName(docName)
@@ -44,7 +26,7 @@ $(document).ready(function(){
     })();
 
     function getElements(response) {
-      $('showNumber').text()
+      $('showDoc').text(`The name of the doctor is ${response.data}`)
     }
 
     function showError(response) {
