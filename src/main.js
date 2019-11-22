@@ -35,7 +35,7 @@ $(document).ready(function(){
       $('.showAddressState').text(response.data[0].practices[0].visit_address.state);
       $('.showAddressZip').text(response.data[0].practices[0].visit_address.zip);
       $('.showPhone').text(response.data[0].practices[0].phones[0].number);
-      $('.showWebsite').text(response.data[0].profile.first_name);
+      // $('.showWebsite').text(response.data[0].practices[0].website);
       $('.showActive').text(response.data[0].practices[0].accepts_new_patients);
 
     }
