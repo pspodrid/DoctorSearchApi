@@ -16,21 +16,23 @@ $(document).ready(function(){
 
     (async () => {
       let hospital = new Hospital();
-      let response = await hospital.apiDocName(docName)
-      if (this.readyState === 4 && this.status === 200) {
-        getElements(response);
+      let response = await hospital.apiDocName(docName);
+      if (response.error) {
+        showError(response);
+        console.log(response);
       } else {
-        showError(response)
+        getElements(response);
+        console.log(response);
       }
 
     })();
 
     function getElements(response) {
-      $('showDoc').text(response.data)
+      $('.showDoc').text(response.data[0].profile.first_name);
     }
 
     function showError(response) {
-      $('showNumber').text(response.data)
+      $('.showDoc').text(response.data);
     }
 
   });
