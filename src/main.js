@@ -26,11 +26,11 @@ $(document).ready(function(){
     })();
 
     function getElements(response) {
-      $('showDoc').text(`The name of the doctor is ${response.data}`)
+      $('showDoc').text(response.data)
     }
 
     function showError(response) {
-      $('showNumber').text()
+      $('showNumber').text(response.data)
     }
 
   });
