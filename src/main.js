@@ -29,6 +29,15 @@ $(document).ready(function(){
 
     function getElements(response) {
       $('.showDoc').text(response.data[0].profile.first_name);
+      $('.showLastDoc').text(response.data[0].profile.last_name);
+      $('.showAddressStreet').text(response.data[0].practices[0].visit_address.street);
+      $('.showAddressCity').text(response.data[0].practices[0].visit_address.city);
+      $('.showAddressState').text(response.data[0].practices[0].visit_address.state);
+      $('.showAddressZip').text(response.data[0].practices[0].visit_address.zip);
+      $('.showPhone').text(response.data[0].practices[0].phones[0].number);
+      $('.showWebsite').text(response.data[0].profile.first_name);
+      $('.showActive').text(response.data[0].practices[0].accepts_new_patients);
+
     }
 
     function showError(response) {
